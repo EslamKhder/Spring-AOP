@@ -4,6 +4,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import com.spring.configration.SpringContainer;
 import com.spring.dao.PostDao;
+import com.spring.dao.PostService;
 
 public class MainApp {
 
@@ -13,7 +14,9 @@ public class MainApp {
 				new AnnotationConfigApplicationContext(SpringContainer.class);
 		PostDao po = an.getBean("postDaoImpl",PostDao.class);
 		po.allPosts();
-		po.allPosts();
+		
+		PostService ps = an.getBean("postServiceImpl",PostService.class);
+		ps.allPosts();
 
 	}
 
