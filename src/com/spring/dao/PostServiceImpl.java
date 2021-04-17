@@ -11,4 +11,10 @@ public class PostServiceImpl implements PostService{
 		return "My Posts ...... PostService";
 	}
 
+	@Override
+	public String allLikes() {
+		// TODO Auto-generated method stub
+		return "PostService... Likes";
+	}
+
 }

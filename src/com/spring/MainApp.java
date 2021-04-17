@@ -14,9 +14,13 @@ public class MainApp {
 				new AnnotationConfigApplicationContext(SpringContainer.class);
 		PostDao po = an.getBean("postDaoImpl",PostDao.class);
 		po.allPosts();
+		System.out.println(po.allLikes());
+		
+		System.out.println("////////////////////////////");
 		
 		PostService ps = an.getBean("postServiceImpl",PostService.class);
 		System.out.println(ps.allPosts());
+		System.out.println(ps.allLikes());
 
 	}
 
