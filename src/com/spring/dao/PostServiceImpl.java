@@ -6,9 +6,9 @@ import org.springframework.stereotype.Component;
 public class PostServiceImpl implements PostService{
 
 	@Override
-	public void allPosts() {
+	public String allPosts() {
 		// TODO Auto-generated method stub
-		System.out.println("My Posts ...... PostService");
+		return "My Posts ...... PostService";
 	}
 
 }
