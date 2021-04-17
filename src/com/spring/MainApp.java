@@ -3,7 +3,7 @@ package com.spring;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.spring.configration.SpringContainer;
-import com.spring.dao.Student;
+import com.spring.dao.PostDao;
 
 public class MainApp {
 
@@ -11,8 +11,10 @@ public class MainApp {
 		// TODO Auto-generated method stub
 		AnnotationConfigApplicationContext an = 
 				new AnnotationConfigApplicationContext(SpringContainer.class);
-		Student st = an.getBean("student",Student.class);
-		st.myData();
+		PostDao po = an.getBean("postDaoImpl",PostDao.class);
+		po.allPosts();
+		po.allPosts();
+
 	}
 
 }
