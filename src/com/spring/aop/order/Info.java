@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-@Order(1)
+@Order(2)
 public class Info {
 
 	@Before("execution(public void getData())")
