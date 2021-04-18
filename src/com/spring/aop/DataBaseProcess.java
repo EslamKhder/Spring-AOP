@@ -12,12 +12,17 @@ public class DataBaseProcess {
 
 	
 	@Before("execution(public String getStudent())")
-	public void begainTra() {
-		System.out.println("Start Tra.....");
+	public void start() {
+		System.out.println("Start .....");
 	}
 	
 	@After("execution(public String getStudent())")
-	public void commitTra() {
-		System.out.println("Commit Tra.....");
+	public void end1() {
+		System.out.println("End 1 .....");
+	}
+	
+	@AfterReturning("execution(public String getStudent())")
+	public void end2() {
+		System.out.println("End 2 .....");
 	}
 }

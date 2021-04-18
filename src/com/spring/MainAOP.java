@@ -14,6 +14,7 @@ public class MainAOP {
 				new AnnotationConfigApplicationContext(SpringContainer.class);
 		AcessDataBase p = an.getBean("acessDataBase",AcessDataBase.class);
 		System.out.println(p.getStudent());
+		
 	}
 
 }
