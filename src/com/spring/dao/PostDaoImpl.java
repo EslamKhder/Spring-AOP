@@ -17,4 +17,10 @@ public class PostDaoImpl implements PostDao{
 		return "PostDao... Likes";
 	}
 
+	@Override
+	public void fumDao() {
+		// TODO Auto-generated method stub
+		System.out.println("Fun Dao");
+	}
+
 }

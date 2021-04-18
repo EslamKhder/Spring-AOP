@@ -19,4 +19,10 @@ public class PostServiceImpl implements PostService{
 		return "PostService... Likes";
 	}
 
+	@Override
+	public void startService() {
+		// TODO Auto-generated method stub
+		System.out.println("Start Service");
+	}
+
 }

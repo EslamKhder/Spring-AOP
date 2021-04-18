@@ -18,12 +18,14 @@ public class MainApp {
 		int re = 0;
 		po.allPosts(u);
 		System.out.println(po.allLikes(u,re));
+		po.fumDao();
 		
 		System.out.println("////////////////////////////");
 		
 		PostService ps = an.getBean("postServiceImpl",PostService.class);
 		System.out.println(ps.allPosts(u,re));
 		System.out.println(ps.allLikes(u));
+		ps.startService();
 
 	}
 

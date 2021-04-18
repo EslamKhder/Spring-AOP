@@ -8,5 +8,6 @@ public interface PostDao {
 	
 	public String allLikes(User user,int result);
 	
+	public void fumDao();
 	
 }
