@@ -5,6 +5,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.spring.configration.SpringContainer;
 import com.spring.dao.PostDao;
 import com.spring.dao.PostService;
+import com.spring.model.User;
 
 public class MainApp {
 
@@ -13,14 +14,16 @@ public class MainApp {
 		AnnotationConfigApplicationContext an = 
 				new AnnotationConfigApplicationContext(SpringContainer.class);
 		PostDao po = an.getBean("postDaoImpl",PostDao.class);
-		po.allPosts();
-		System.out.println(po.allLikes());
+		User u = new User();
+		int re = 0;
+		po.allPosts(u);
+		System.out.println(po.allLikes(u,re));
 		
 		System.out.println("////////////////////////////");
 		
 		PostService ps = an.getBean("postServiceImpl",PostService.class);
-		System.out.println(ps.allPosts());
-		System.out.println(ps.allLikes());
+		System.out.println(ps.allPosts(u,re));
+		System.out.println(ps.allLikes(u));
 
 	}
 
