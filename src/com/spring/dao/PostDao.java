@@ -10,4 +10,8 @@ public interface PostDao {
 	
 	public void fumDao();
 	
+	public void setId();
+	
+	public int getId();
+	
 }

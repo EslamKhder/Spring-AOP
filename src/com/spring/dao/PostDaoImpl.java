@@ -6,6 +6,8 @@ import com.spring.model.User;
 
 @Component
 public class PostDaoImpl implements PostDao{
+	
+	private int id;
 
 	@Override
 	public void allPosts(User user) {
@@ -22,5 +24,17 @@ public class PostDaoImpl implements PostDao{
 		// TODO Auto-generated method stub
 		System.out.println("Fun Dao");
 	}
+
+	@Override
+	public void setId() {
+		System.out.println("this is set ID");
+	}
+
+	@Override
+	public int getId() {
+		System.out.println("this is get ID");
+		return 0;
+	}
+	
 
 }
